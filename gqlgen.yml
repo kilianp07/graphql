@@ -1,0 +1,24 @@
+# gqlgen.yml
+
+# Point d'entrée pour votre schéma GraphQL
+schema:
+  - graph/schema.graphqls
+
+# Dossier où le code généré sera sauvegardé
+exec:
+  filename: graph/generated.go
+  package: graph
+
+# Configuration pour la génération du code
+model:
+  # Spécifiez le nom du fichier des modèles générés
+  filename: graph/model/models_gen.go
+  # Spécifiez le package où les modèles générés seront placés
+  package: model
+
+# Configuration pour les résolveurs
+resolver:
+  # Spécifiez le nom du fichier des résolveurs générés
+  filename: graph/schema.resolvers.go
+  # Spécifiez le package où les résolveurs générés seront placés
+  package: graph
